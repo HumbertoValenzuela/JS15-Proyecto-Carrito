@@ -1,0 +1,358 @@
+@charset "UTF-8";
+/*Variables para los tamaños de Media Queries*/
+/** Media Queries*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+.borrar-curso {
+  background-color: red;
+  border-radius: 50%;
+  padding: 1px 2px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box; 
+  display: block;
+}
+th, td {
+padding: 1px 2px;
+    text-align: left;
+    border-bottom: .4px solid #E1E1E1;
+}
+.centrado {
+  text-align: center;
+}
+
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.oculto {
+  display: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  padding: 1.4rem 0;
+}
+
+.carrito-compras {
+  position: relative;
+}
+
+.carrito-compras:hover .contenido {
+  display: block;
+  position: absolute;
+  right: 0;
+  background-color: #f2f2f2;
+  padding: 1rem;
+  max-width: 360px; 
+  z-index: 1;
+}
+
+.carrito-compras:hover .contenido img {
+  max-width: 50px;
+}
+
+.carrito-compras:hover .contenido .boton {
+  background-color: #741d51;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  display: block;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero {
+  /**/
+  /*imagen cortada*/
+  background-image: url("../img/hero.jpg");
+  /*Default todas se repiten*/
+  background-repeat: no-repeat;
+  /*dejara espacio izq der*/
+  background-position: center center;
+  /*altura*/
+  min-height: 24rem;
+  /*Ocupa todo el espacio*/
+  background-size: cover;
+  /*texto color*/
+  color: #fff;
+  /*flex centra*/
+  display: flex;
+  /*Alinear vertical*/
+  align-items: center;
+}
+
+.hero .contenido-hero {
+  /*flex-grow:1;*/
+  flex: 1;
+}
+
+.hero .contenido-hero h2 {
+  /*ancho de letra*/
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+
+.hero .contenido-hero p {
+  font-size: 1.2rem;
+}
+
+.hero .contenido-hero form {
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero .contenido-hero form {
+    /*limita a cajatexto y boton al 40%*/
+    width: 40%;
+  }
+}
+
+.hero .contenido-hero form input[type="submit"] {
+  /*pondra al lado derecho*/
+  position: absolute;
+  /*deja el boton dentro de cajatexto*/
+  right: 0;
+  top: 0;
+  /*imagen cortada*/
+  background-image: url("../img/lupa.png");
+  /*Default todas se repiten*/
+  background-repeat: no-repeat;
+  /*dejara espacio izq der*/
+  background-position: center center;
+  /*para ocupar ancho alto de cajatexto*/
+  width: 2.9rem;
+  height: 2.9rem;
+  display: block;
+  /*para quitar letra a boton*/
+  text-indent: 100%;
+  /*quitar borde*/
+  border: none;
+  cursor: pointer;
+}
+
+.hero .contenido-hero form input[type="text"] {
+  /*cajatexto ocupa 100%*/
+  width: 100%;
+  /*ancho cajatexto*/
+  height: 3rem;
+}
+
+.barra {
+  min-height: 8rem;
+  background: linear-gradient(to right, #741d51 0%, #e44e52 100%);
+  color: #fff;
+  /*flex centra el contenido*/
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.barra .iconos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .barra .iconos {
+    flex-direction: row;
+  }
+  .carrito-compras:hover .contenido {    
+    max-width: 600px;     
+  }
+  th, td {
+    padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #E1E1E1;
+  }
+  .u-full-width {
+    width: 100%;   
+  }
+  .carrito-compras:hover .contenido img {
+    max-width: 200px;
+  }
+  .borrar-curso {   
+    padding: 5px 7px;
+  
+  }
+
+}
+
+.barra .iconos .icono {
+  /*ocupe mismo tamaño*/
+  flex: 1;
+  background-position: 7% center !important;
+  text-align: center;
+  background-size: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .barra .iconos .icono {
+    /*imagen queda en media de <p>*/
+    background-position: 20% center !important;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .barra .iconos .icono {
+    /*imagen queda en media de <p>*/
+    background-position: left center !important;
+  }
+}
+
+.barra .iconos .icono.icono1 {
+  /*imagen cortada*/
+  background-image: url("../img/icono1.png");
+  /*Default todas se repiten*/
+  background-repeat: no-repeat;
+  /*dejara espacio izq der*/
+  background-position: center center;
+}
+
+.barra .iconos .icono.icono2 {
+  /*imagen cortada*/
+  background-image: url("../img/icono2.png");
+  /*Default todas se repiten*/
+  background-repeat: no-repeat;
+  /*dejara espacio izq der*/
+  background-position: center center;
+}
+
+.barra .iconos .icono.icono3 {
+  /*imagen cortada*/
+  background-image: url("../img/icono3.png");
+  /*Default todas se repiten*/
+  background-repeat: no-repeat;
+  /*dejara espacio izq der*/
+  background-position: center center;
+}
+
+.cursos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cursos .curso {
+  border: 1px solid #bfbfbf;
+  margin-bottom: 1rem;
+}
+
+.cursos .curso .imagen-curso {
+  width: 100%;
+}
+
+@media only screen and (min-width: 400px) {
+  .cursos .curso {
+    flex: 0 1 calc(50% - 1rem);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .cursos .curso {
+    flex: 0 1 calc(33% - 1rem);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .cursos .curso {
+    flex: 0 1 calc(25% - 1rem);
+  }
+}
+
+.info-curso {
+  padding: 1rem;
+}
+
+.info-curso h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.info-curso .precio {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-curso .precio .regular {
+  text-decoration: line-through;
+  color: red;
+}
+
+.info-curso .precio .oferta {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: green;
+}
+
+.info-curso .boton {
+  background-color: #741d51;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  display: block;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer {
+  border-top: 1px solid #bfbfbf;
+  margin-top: 1rem;
+  padding-top: 2rem;
+}
+
+.footer .contenedor-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 400px) {
+  .footer .contenedor-footer {
+    flex-direction: row;
+  }
+}
+
+.menu, .navegacion {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+@media only screen and (min-width: 1024px) {
+  .menu, .navegacion {
+    flex: 0 1 calc(30% - 1rem);
+  }
+}
+
+.menu a, .navegacion a {
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.navegacion a {
+  color: #741d51;
+}
